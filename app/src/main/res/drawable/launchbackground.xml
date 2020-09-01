@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+            <gradient
+                android:startColor="#ddd9c0"
+                android:centerColor="#ece9d5"
+                android:endColor="#ddd9c0"
+                android:type="linear"
+                android:angle="90"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/ic_torrebooks_b_only"
+            android:gravity="center" />
+    </item>
+</layer-list>

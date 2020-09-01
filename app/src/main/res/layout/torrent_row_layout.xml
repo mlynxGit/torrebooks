@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/file_card"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="3dp"
+    card_view:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <view
+            android:id="@+id/btnDownload"
+            android:layout_width="@dimen/fab_button_size"
+            android:layout_height="@dimen/fab_button_size"
+            android:clickable="true"
+            android:focusable="true"
+            class="mbanje.kurt.fabbutton.FabButton"
+            android:color="@color/colorAccent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_fab_download"
+            android:visibility="visible"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            app:fbb_showShadow="true"
+            app:fbb_progressColor="@color/ratingFilled"
+            app:fbb_progressWidthRatio="0.08"
+            app:fbb_endBitmap="@drawable/ic_fab_complete"
+            app:fbb_showEndBitmap="true"
+            />
+        <TextView
+            android:id="@+id/torrentFileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnDownload"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="Android Programming - App Development For Beginners [epub]"
+            android:textColor="#000"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/filesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/torrentFileTitle"
+            android:layout_alignLeft="@+id/torrentFileTitle"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_file"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="129 KB"
+            android:textColor="@color/ratingFilled"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/seeders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/torrentFileTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/ic_users"
+            android:gravity="center_vertical"
+            android:text="12"
+            android:textColor="#91dc5a"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/added"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/torrentFileTitle"
+            android:layout_alignBaseline="@id/filesize"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="50dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/filesize"
+            android:text="5 uears ago"
+            android:textColor="@color/tagColor"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/txt_download_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filesize"
+            android:visibility="invisible"
+            android:layout_marginBottom="5dp"
+            android:text="Gathering metadata..."
+            android:textSize="12sp"
+            android:layout_alignLeft="@id/filesize" />
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>

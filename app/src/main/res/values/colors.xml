@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E6E3D9</color>
+    <color name="colorPrimaryDark">#53463E</color>
+    <color name="colorAccent">#604D40</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="navigationDrawerColor">#303030</color>
+    <color name="navigationDrawerIconTint">#F8F8F1</color>
+    <color name="navigationDrawerTextColor">#EAEAEA</color>
+    <color name="navigationDrawerSeperatorColor">#505050</color>
+    <color name="ratingFilled">#FA634F</color>
+    <color name="tagColor">#c5c5c5</color>
+    <color name="tagShadowColor">#7e7e7e</color>
+    <color name="colorGreen">#70ca2e</color>
+</resources>

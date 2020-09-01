@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <integer name="anim_duration_medium">300</integer>
+        <integer name="anim_duration_long">400</integer>
+        <array name="paranoid_theme">
+                <!-- Overview -->
+                <item>#604d40</item> <!--  Top Header bg -->
+                <item>#FFFFFF</item> <!-- header text   -->
+                <item>#F8F8F1</item> <!-- list bg  -->
+                <item>@android:color/white</item> <!--  storage list name text  -->
+                <item>#505050</item> <!-- free space text  -->
+                <item>#FA634F</item> <!-- memory bar -->
+
+                <!-- secondary dialog colors -->
+                <item>#7e7e7e</item> <!-- folder tint -->
+                <item>#F8F8F1</item> <!-- list bg -->
+                <item>#505050</item> <!-- list text -->
+                <item>#604D40</item> <!-- address bar tint -->
+                <item>@color/chevronBgColor</item> <!-- new folder hint tint -->
+                <item>#FA634F</item> <!-- select button color -->
+                <item>#da6c6c</item> <!-- new folder layour bg -->
+                <item>#FA634F</item> <!-- fab multiselect color -->
+                <item>#151515</item> <!-- address bar bg -->
+        </array>
+</resources>

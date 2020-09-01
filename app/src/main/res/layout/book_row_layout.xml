@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp">
+    <com.ramotion.foldingcell.FoldingCell
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cell_detail_card"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="3dp"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/buttonOptions"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/overflow_menu_selector"/>
+                    <TextView
+                        android:id="@+id/cell_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textSize="15sp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="Don Quixote"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textColor="@color/colorWhite"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cell_detail_authors_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_below="@+id/cell_detail_title" />
+                    <TextView
+                        android:id="@+id/cell_detail_pages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@drawable/ic_open_book"
+                        android:text="205 Pages"
+                        android:drawablePadding="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorAccent"
+                        android:layout_below="@+id/cell_detail_authors_recycler"
+                        />
+                    <TextView
+                        android:id="@+id/cell_detail_publishdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:layout_marginRight="5dp"
+                        android:drawablePadding="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="11-05-2017"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/cell_detail_authors_recycler"
+                        />
+                    <TextView
+                        android:id="@+id/cell_detail_publisher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_building"
+                        android:text="Random House"
+                        android:drawablePadding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/cell_detail_pages" />
+                    <TextView
+                        android:id="@+id/cell_detail_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_language"
+                        android:text="Random House"
+                        android:drawablePadding="4dp"
+                        android:layout_alignBaseline="@+id/cell_detail_publisher"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignLeft="@+id/cell_detail_publishdate"
+                        android:layout_below="@+id/cell_detail_publishdate" />
+                    <TextView
+                        android:id="@+id/cell_detail_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight = "150dp"
+                        android:padding="8dp"
+                        android:layout_margin="10dp"
+                        android:textSize="16sp"
+                        android:gravity="left"
+                        android:lineSpacingExtra="5dp"
+                        android:layout_below="@+id/cell_detail_publisher"
+                        android:text="Lorem ipsum set dolor amet the quick brown fox jumped over the lazy dog"/>
+                    <Button
+                        android:id="@+id/cell_detail_download_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_margin="10dp"
+                        android:text="Download Book"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/cell_detail_description"  />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+        ​
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.maghribpress.torrebook.ui.InterceptTouchCardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cell_content_card"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="3dp"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/main_layout_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_book_cover"
+                        android:layout_width="128dp"
+                        android:src="@drawable/tgg"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_height="190dp" />
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:lineSpacingMultiplier="1.5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nunito"
+                        android:singleLine="false"
+                        android:textSize="15sp"
+                        android:textColor="#000"
+                        android:layout_toRightOf="@+id/img_book_cover"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="F. Scott Fitzgerald's the Great Gatsby" />
+                    <TextView
+                        android:id="@+id/txt_authors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:singleLine="false"
+                        android:lineSpacingMultiplier="0.8"
+                        android:textSize="14sp"
+                        android:textColor="#555"
+                        android:layout_toRightOf="@+id/img_book_cover"
+                        android:layout_below="@+id/txt_title"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="By F. Scott Fitzgerald, Harold Bloom" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/img_book_cover"
+                        android:layout_below="@+id/txt_authors"
+                        android:numStars="5"
+                        android:rating="4" />
+                    <TextView
+                        android:id="@+id/txt_ratinginfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:maxLines="1"
+                        android:text="4.3 - 755 ratings"
+                        android:layout_below="@+id/txt_authors"
+                        android:layout_toRightOf="@+id/ratingBar" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/categories_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/img_book_cover"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:layout_marginLeft="8dp"
+                        android:layout_below="@+id/txt_ratinginfo"
+                        android:layout_toRightOf="@+id/img_book_cover" />
+
+                </RelativeLayout>
+            </com.maghribpress.torrebook.ui.InterceptTouchCardView>
+        </FrameLayout>
+        ​
+    </com.ramotion.foldingcell.FoldingCell>
+</LinearLayout>
